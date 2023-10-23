@@ -1,0 +1,35 @@
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #ed9d8c;
+  padding: 50px 40px;
+}
+footer h2 {
+  font-family: var(--bold);
+  font-size: 1rem;
+  color: var(--cor-principal);
+  letter-spacing: 10px;
+}
+footer p {
+  font-family: var(--bold);
+  font-size: 0.8rem;
+  color: var(--cor-branco);
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 1000px) {
+  footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  footer p {
+    width: 100%;
+    max-width: 250px;
+    padding: 15px 0 0 0;
+    line-height: 1.5;
+  }
+}

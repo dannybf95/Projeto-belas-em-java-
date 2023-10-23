@@ -1,0 +1,27 @@
+
+section.faixa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  width: 100%;
+  border-top: 2px solid var(--cor-principal);
+  border-bottom: 2px solid var(--cor-principal);
+}
+section.faixa h2 {
+  font-family: var(--bold);
+  color: var(--cor-principal);
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 1000px) {
+  section.faixa {
+    padding: 20px;
+  }
+  section.faixa h2 {
+    font-size: 0.9rem;
+  }
+
+}

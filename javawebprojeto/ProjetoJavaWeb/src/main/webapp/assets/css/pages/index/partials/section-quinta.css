@@ -1,0 +1,157 @@
+
+section.quinta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: linear-gradient(150deg, rgba(182, 55, 55, 0.1), rgba(255, 255, 255, 0));
+  background: -webkit-linear-gradient(150deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  padding: 150px 100px 150px 100px;
+  width: 100%;
+  position: relative;
+}
+section.quinta .faixa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  background-color: var(--cor-destaque-2);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+section.quinta .faixa p {
+  font-family: var(--bold);
+  font-size: 1rem;
+  color: var(--cor-branco);
+  line-height: 1.5;
+  text-align: center;
+}
+section.quinta .faixa .losango {
+  border-top: 20px solid var(--cor-destaque-1);
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  transform: rotate(180deg) translate(50%, 0);
+  position: absolute;
+  top: -35px;
+  left: 50%;
+}
+section.quinta .quadro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 150px 50px 50px 50px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-top: 20px solid var(--cor-principal);
+  border-radius: 15px;
+  position: relative;
+  transition: all 0.3s;
+  text-align: center;
+}
+section.quinta .quadro.meio {
+  margin: 0 20px;
+}
+section.quinta .quadro:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-top: 20px solid var(--cor-branco);
+}
+section.quinta .quadro .foto {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: all 0.3s;
+}
+section.quinta .quadro:hover .foto {
+  transform: translate(-50%, 0) scale(1.1);
+}
+section.quinta .quadro img.logo {
+  width: 100%;
+  max-width: 180px;
+}
+section.quinta .quadro h2 {
+  font-family: var(--bold);
+  font-size: 2rem;
+  color: var(--cor-branco);
+  line-height: 1.5;
+}
+section.quinta .quadro h3 {
+  font-family: var(--bold);
+  font-size: 1.5rem;
+  color: var(--cor-principal);
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+section.quinta .quadro p {
+  font-family: var(--regular);
+  font-size: 1rem;
+  color: var(--cor-branco);
+  opacity: 0.5;
+  line-height: 1.5;
+  padding: 10px 0 30px 0;
+  width: 100%;
+  max-width: 350px;
+}
+section.quinta .quadro a {
+  display: flex;
+  align-items: center;
+  font-family: var(--bold);
+  font-size: 1rem;
+  color: var(--cor-fundo);
+  background-color: var(--cor-principal);
+  border: 3px solid var(--cor-principal);
+  border-radius: 100px;
+  padding: 20px 90px 20px 30px;
+  position: relative;
+  transition: all 0.3s;
+}
+section.quinta .quadro a img {
+  position: absolute;
+  right: 10px;
+  width: 100%;
+  max-width: 40px;
+  background-color: var(--cor-fundo);
+  border-radius: 50%;
+  padding: 3px;
+  transition: all 0.3s;
+}
+section.quinta .quadro a:hover img {
+  background-color: transparent;
+}
+section.quinta .quadro a:hover {
+  color: var(--cor-principal);
+  background-color: transparent;
+}
+
+
+@media screen and (max-width: 1000px) {
+  section.quinta {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px 180px 20px;
+  }
+  section.quinta .quadro {
+    padding: 140px 30px 50px 30px;
+  }
+  section.quinta .quadro.meio {
+    margin: 80px 0;
+  }
+  section.quinta .quadro .foto {
+    width: 150px;
+    height: 150px;
+    top: -50px;
+  }
+}
+  

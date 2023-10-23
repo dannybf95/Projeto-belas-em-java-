@@ -1,0 +1,331 @@
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 10px 80px;
+  transition: all 0.3s;
+  z-index: 5;
+    
+}
+
+nav.img {
+  padding-left: 50px;
+}
+nav.scroll {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+nav .opcoes {
+  display: flex;
+}
+nav .opcoes h2 {
+  font-family: var(--bold);
+  font-size: 1.2rem;
+  color: var(--cor-principal);
+  letter-spacing: 10px;
+}
+nav .opcoes a {
+  font-family: var(--bold);
+  font-size: 1rem;
+  color: var(--cor-branco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  margin: 0 0 0 60px;
+  transition: all 0.3s;
+}
+nav .opcoes a img {
+  width: 100%;
+  max-width: 15px;
+  margin: 0 0 0 10px;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+nav .opcoes a:hover {
+  color: var(--cor-principal);
+}
+nav .opcoes a:hover img {
+  transform: scale(0.6);
+}
+nav .opcoes button {
+  font-family: var(--bold);
+  font-size: 1rem;
+  color: var(--cor-branco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  margin: 0 0 0 50px;
+  transition: all 0.3s;
+}
+nav .opcoes button img {
+  width: 100%;
+  max-width: 15px;
+  margin: 0 0 0 10px;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+nav .opcoes button:hover {
+  color: var(--cor-principal);
+}
+nav .opcoes button:hover img {
+  transform: scale(0.6);
+}
+
+nav a.destaque {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--bold);
+  font-size: 1rem;
+  color: var(--cor-principal);
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: 100px;
+  border: 2px solid var(--cor-principal);
+  transition: all 0.3s;
+  margin: 0 0 0 30px;
+}
+nav a.destaque:hover {
+  color: var(--cor-fundo);
+  background-color: var(--cor-principal);
+}
+
+nav .quadro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 320px;
+  border-radius: 10px;
+  padding: 15px 30px;
+  background: linear-gradient(150deg, var(--cor-destaque-1) 0%, var(--cor-destaque-2) 20%, var(--cor-fundo) 50%);
+  background: -webkit-linear-gradient(150deg, var(--cor-destaque-1) 0%, var(--cor-destaque-2) 20%, var(--cor-fundo) 50%);
+  position: fixed;
+  top: 70px;
+  left: 150px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(0.9);
+  transition: all 0.3s;
+  z-index: 1;
+}
+nav .quadro.mostrar {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: scale(1);
+  z-index: 2;
+}
+nav .quadro a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: left;
+  margin: 15px 0;
+}
+nav .quadro a .icone {
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s;
+  background-color: var(--cor-principal);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  pointer-events: none;
+  margin: 0 10px 0 0;
+}
+nav .quadro a h3 {
+  font-family: var(--bold);
+  font-size: 1rem;
+  color: var(--cor-branco);
+  pointer-events: none;
+  transition: all 0.3s;
+}
+nav .quadro a p {
+  font-family: var(--regular);
+  font-size: 1rem;
+  color: var(--cor-branco);
+  opacity: 0.5;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+nav .quadro a:hover h3 {
+  color: var(--cor-principal);
+}
+nav .quadro a:hover p {
+  color: var(--cor-principal);
+}
+
+nav button.abrirMenuMobile {
+  display: none;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background-color: transparent;
+  width: 30px;
+  height: 15px;
+  min-width: 30px;
+  min-height: 15px;
+  position: relative;
+  transition: all 0.3s;
+  margin-left: auto;
+}
+nav button.abrirMenuMobile .maior {
+  width: 30px;
+  height: 4px;
+  min-width: 30px;
+  min-height: 4px;
+  border-radius: 40px;
+  background-color: var(--cor-branco);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+nav button.abrirMenuMobile .menor {
+  width: 20px;
+  height: 4px;
+  min-width: 20px;
+  min-height: 4px;
+  border-radius: 40px;
+  background-color: var(--cor-branco);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: all 0.3s;
+  pointer-events: none;
+}
+nav button.abrirMenuMobile.ativo {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  min-height: 30px;
+}
+nav button.abrirMenuMobile.ativo .maior {
+  top: 50%;
+  right: 0;
+  transform: rotate(-45deg);
+}
+nav button.abrirMenuMobile.ativo .menor {
+  width: 30px;
+  min-width: 30px;
+  top: 50%;
+  right: 0;
+  transform: rotate(45deg);
+}
+nav button.abrirMenuMobile:hover div {
+  background-color: var(--cor-principal);
+}
+
+nav .menuMobile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 30px 20px 50px 20px;
+  background-color: #cbb396;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+nav .menuMobile.mostrar {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  top: 145px;
+}
+nav .menuMobile a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: left;
+  margin: 20px 0 0 0;
+}
+nav .menuMobile a .icone {
+  width: 50px;
+  height: 50px;
+  transition: all 0.3s;
+  background-color: var(--cor-principal);
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  pointer-events: none;
+  margin: 0 10px 0 0;
+}
+nav .menuMobile a h3 {
+  font-family: var(--bold);
+  font-size: 1rem;
+  color: var(--cor-branco);
+  pointer-events: none;
+  transition: all 0.3s;
+}
+nav .menuMobile a p {
+  font-family: var(--regular);
+  font-size: 1rem;
+  color: var(--cor-branco);
+  opacity: 0.5;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+nav .menuMobile a:hover h3 {
+  color: var(--cor-principal);
+}
+nav .menuMobile a:hover p {
+  color: var(--cor-principal);
+}
+nav .menuMobile a.destacado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--bold);
+  font-size: 1rem;
+  color: var(--cor-principal);
+  background-color: transparent;
+  padding: 10px 20px;
+  border-radius: 100px;
+  border: 2px solid var(--cor-principal);
+  transition: all 0.3s;
+}
+nav .menuMobile a.destacado:hover {
+  color: var(--cor-fundo);
+  background-color: var(--cor-principal);
+}
+
+@media screen and (max-width: 1000px) {
+  nav {
+    padding: 20px;
+  }
+  nav .opcoes a {
+    display: none;
+  }
+  nav .opcoes button {
+    display: none;
+  }
+  nav a.destaque {
+    display: none;
+  }
+  nav button.abrirMenuMobile {
+    display: flex;
+  }
+}

@@ -1,0 +1,22 @@
+
+html {
+  scrollbar-color: var(--cor-fundo) var(--cor-principal);
+  scrollbar-width: thin;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--cor-fundo);
+  width: 4px;
+  height: 4px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--cor-principal);
+  width: 4px;
+  height: 4px;
+  border-radius: 10px;
+}

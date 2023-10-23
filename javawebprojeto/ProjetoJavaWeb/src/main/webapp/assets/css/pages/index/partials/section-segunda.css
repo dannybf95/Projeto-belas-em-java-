@@ -1,0 +1,85 @@
+
+section.segunda {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: linear-gradient(50deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  background: -webkit-linear-gradient(50deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  padding: 40px 80px;
+  position: relative; /* Adicionado */
+}
+
+section.segunda:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  z-index: 1;
+}
+
+section.segunda .capa {
+  width: 100%;
+  max-width: 250px;
+  height: 250px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 100px 20px 20px 20px;
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-right: 10px solid var(--cor-principal);
+  z-index: 2; /* Adicionado */
+}
+
+section.segunda .texto {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 500px;
+  padding: 0 0 0 50px;
+  position: relative; /* Adicionado */
+  z-index: 2; /* Adicionado */
+}
+
+section.segunda .texto h2 {
+  font-family: var(--bold);
+  font-size: 2.5rem;
+  color: var(--cor-branco);
+}
+
+section.segunda .texto h2 span {
+  color: var(--cor-principal);
+}
+
+section.segunda .texto p {
+  font-family: var(--regular);
+  font-size: 1rem;
+  color: var(--cor-branco);
+  opacity: 0.5;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 1000px) {
+  section.segunda {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  section.segunda .capa {
+    max-width: 150px;
+    height: 150px;
+    border-radius: 50px 20px 20px 20px;
+  }
+  section.segunda .texto {
+    padding: 20px 0 0 0;
+  }
+  section.segunda .texto h2 {
+    font-size: 2rem;
+  }
+}

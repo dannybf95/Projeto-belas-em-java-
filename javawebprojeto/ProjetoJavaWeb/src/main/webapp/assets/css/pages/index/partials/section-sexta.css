@@ -1,0 +1,123 @@
+
+section.sexta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+  width: 100%;
+  background: linear-gradient(20deg, var(--cor-destaque-1) 0%, var(--cor-destaque-2) 20%, var(--cor-fundo) 40%);
+  background: -webkit-linear-gradient(20deg, var(--cor-destaque-1) 0%, var(--cor-destaque-2) 20%, var(--cor-fundo) 40%);
+}
+section.sexta h2 {
+  font-family: var(--bold);
+  font-size: 2rem;
+  color: var(--cor-branco);
+  text-align: center;
+}
+section.sexta h2 span {
+  color: var(--cor-principal);
+}
+section.sexta p {
+  font-family: var(--regular);
+  font-size: 1rem;
+  color: var(--cor-branco);
+  opacity: 0.5;
+  line-height: 1.5;
+  padding: 5px 0 30px 0;
+  text-align: center;
+}
+section.sexta .input {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 750px;
+}
+section.sexta .input .bolinha {
+  position: absolute;
+  left: 40px;
+  width: 20px;
+  height: 20px;
+  background-color: var(--cor-principal);
+  border-radius: 50%;
+  pointer-events: none;
+}
+section.sexta .input h3 {
+  font-family: var(--bold);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-principal);
+  position: absolute;
+  top: 50%;
+  left: 90px;
+  transform: translate(0, -50%);
+  pointer-events: none;
+}
+section.sexta .input button {
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translate(0, -50%);
+}
+section.sexta .input button img {
+  width: 100%;
+  max-width: 70px;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+section.sexta .input button:hover img {
+  opacity: 0.7;
+  animation: imgButton 1s linear infinite;
+}
+@keyframes imgButton {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+section.sexta .input input {
+  font-family: var(--regular);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: var(--cor-branco);
+  background-color: var(--cor-fundo);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  padding: 40px 40px 40px 315px;
+  width: 100%;
+}
+section.sexta .input input::placeholder {
+  opacity: 1;
+  color: var(--cor-texto);
+}
+section.sexta .input input:focus {
+  color: var(--cor-principal);
+}
+
+@media screen and (max-width: 1000px) {
+  section.sexta {
+    padding: 80px 20px;
+  }
+  section.sexta .input .bolinha {
+    display: none;
+  }
+  section.sexta .input h3 {
+    font-size: 0.8rem;
+    left: 25px;
+  }
+  section.sexta .input button {
+    right: 10px;
+  }
+  section.sexta .input button img {
+    max-width: 45px;
+  }
+  section.sexta .input input {
+    font-size: 0.8rem;
+    padding: 25px 25px 25px 175px;
+  }
+}

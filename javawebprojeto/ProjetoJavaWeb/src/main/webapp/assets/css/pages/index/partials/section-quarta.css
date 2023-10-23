@@ -1,0 +1,121 @@
+
+section.quarta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(50deg, var(--cor-destaque-1) 0%, var(--cor-destaque-2) 20%, var(--cor-fundo) 40%);
+  background: -webkit-linear-gradient(50deg, var(--cor-destaque-1) 0%, var(--cor-destaque-2) 20%, var(--cor-fundo) 40%);
+  padding: 80px;
+  position: relative;
+  overflow: hidden;
+}
+section.quarta .imagem {
+  width: 100%;
+  max-width: 400px;
+  min-height: 400px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 100px 20px 20px 20px;
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 2;
+}
+section.quarta .circulo {
+  width: 1000px;
+  height: 1000px;
+  border: 5px dashed var(--cor-branco);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -500px;
+  left: -500px;
+  animation: rodando 30s linear infinite;
+  z-index: 1;
+}
+section.quarta .partes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  max-width: 50%;
+  margin-left: auto;
+}
+section.quarta .partes .parte {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+}
+section.quarta .partes .parte.meio {
+  margin: 80px 250px 80px 0;
+  padding-left: 150px;
+}
+section.quarta .partes .parte .icone {
+  width: 100%;
+  max-width: 150px;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 100px 20px 20px 20px;
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-right: 10px solid var(--cor-principal);
+  margin: 0 20px;
+}
+section.quarta .partes .texto h2 {
+  font-family: var(--bold);
+  font-size: 2rem;
+  color: var(--cor-branco);
+  line-height: 1.5;
+}
+section.quarta .partes .texto h2 span {
+  color: var(--cor-principal);
+}
+section.quarta .partes .texto p {
+  font-family: var(--regular);
+  font-size: 1rem;
+  color: var(--cor-branco);
+  opacity: 0.5;
+  line-height: 1.5;
+  padding: 10px 0 0 0;
+}
+
+@media screen and (max-width: 1000px) {
+  section.quarta {
+    flex-direction: column-reverse;
+    padding: 80px 20px;
+  }
+  section.quarta .imagem {
+    min-height: 497px;
+  }
+  section.quarta .circulo {
+    width: 700px;
+    height: 700px;
+    bottom: -500px;
+    left: -300px;
+  }
+  section.quarta .partes {
+    align-items: flex-start;
+    max-width: 100%;
+    padding: 0 0 50px 0;
+  }
+  section.quarta .partes .parte {
+    padding: 0;
+  }
+  section.quarta .partes .parte.meio {
+    padding: 0;
+    margin: 50px 0 50px 0;
+  }
+  section.quarta .partes .parte .icone {
+    width: 100%;
+    max-width: 120px;
+    min-width: 120px;
+    height: 120px;
+    border-radius: 50px 20px 20px 20px;
+    margin: 0 20px;
+  }
+}
